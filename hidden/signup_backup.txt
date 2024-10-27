@@ -1,0 +1,10 @@
+<div class="profile-pic">
+    <h2> Gambar profil </h2>
+    <p> Tambahkan gambar profil supaya orang lain bisa mengenali Anda. </p>
+    <img id="account-frame" src="" hidden>
+    <img id="default-user" src="icon/windows8_account_picture.png">
+    <br>
+    <input type="file" id="fileInput" style="display: none;">
+    <button class="modern-button" type="button" id="btn-upload"> Ganti </button>
+    <button class="modern-button" type="button" id="btn-del"> Hapus </button>
+</div>

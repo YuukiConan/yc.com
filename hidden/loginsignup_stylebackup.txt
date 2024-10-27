@@ -1,0 +1,331 @@
+/* This CSS is linked to tech.xyz styles */
+
+* {
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(to top right, black, #202020);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+hr {
+    border: 1px solid #c4c4c4;
+}
+
+.v-line {
+    display: inline;
+    margin-right: 10px;
+    animation: fadeInLeft .4s;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    white-space: wrap;
+    top: 10%; bottom: 30%; left: 0%; right: 0%;
+    background-color: transparent;
+    transition: all .4s;
+}
+
+#login-header p {
+    font-size: 13px;
+}
+
+.login-panel {
+    animation: fadeInLeft .5s;
+    text-align: left;
+}
+
+.login-panel p {
+    font-size: 14px;
+}
+
+body.dark-mode .login-panel {
+    border-color: #3a3a3a;
+}
+
+.form-textbox {
+    background-color: #202020;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding-left: 12px;
+    margin: 0px 0px 0px 0px;
+    font-family: "Space Mono", sans-serif;
+    outline: none;
+    border: 1px solid #505050;
+    transition: all .2s;
+    display: block;
+}
+
+body.dark-mode .form-textbox {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.form-textbox:focus {
+    background-color: transparent !important;
+}
+
+.login-content {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    animation: fadeInLeft .7s;
+}
+
+.form-label {
+    position: absolute;
+    top: -26px;
+    left: 0px;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.show-password-panel {
+    position: absolute;
+    top: 0px;
+    right: -3px;
+    text-align: left;
+    animation: fadeInLeft .6s;
+}
+
+#show-password {
+    width: 40px;
+    height: 40px;
+}
+
+.isToggle {
+    background-color: #95959530;
+    color: #00bb00;
+}
+
+.form-textbox:focus + .isToggle {
+    border-radius: 50px 10px 10px 50px;
+}
+
+.toggle {
+    position: relative;
+    left: -9px;
+    top: 2px;
+    width: 52px;
+    height: 18px;
+    border: 1px solid #888888;
+    border-radius: 34px;
+    margin-right: 7px;
+    float: left;
+    filter: drop-shadow(0px 0px 5px rgb(129, 129, 129));
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: .2s;
+    border-radius: 34px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 10px;
+    top: 4px;
+    left: 4.7px;
+    background-color: rgb(21, 179, 16);
+    transition: .3s cubic-bezier(0.500, 0.25, 0.25, 1.65);
+    border-radius: 20px;
+}
+
+input[type=checkbox]:checked + .slider {
+    background-color: #ffffff;
+}
+
+input[type=checkbox]:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.other-accounts {
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.other-accounts > :nth-child(2) {
+    animation-duration: .4s;
+}
+
+.other-accounts > :nth-child(3) {
+    animation-duration: .6s;
+}
+
+.other-accounts > :nth-child(4) {
+    animation-duration: .8s;
+}
+
+.accounts {
+    animation: fadeInLeft 1.2s;
+}
+
+.small-buttons {
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0px 4px 10px 10px;
+    font-size: 18px;
+    transition: all .1s;
+}
+
+.small-buttons:hover {
+    background-color: #95959530;
+}
+
+.small-buttons:active {
+    background-color: #95959530;
+}
+
+.small-buttons:focus {
+    background-color: #95959530;
+    color: #00aa00;
+}
+
+body.dark-mode .small-buttons {
+    color: white;
+}
+
+#back-button {
+    background-color: transparent;
+    border: none;
+    width: 120px;
+    font-size: 14px;
+    height: 30px;
+    font-family: "Open Sans";
+    position: fixed;
+    left: 15px;
+    top: 13px;
+    transition: all .2s;
+}
+
+#back-button i {
+    border: 1px solid #00aa00;
+    display: inline-block;
+    line-height: 23px;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+#back-button:hover {
+    background-color: #acacac;
+    border-radius: 50px;
+}
+
+#back-button:active {
+    transform: scale(0.95);
+}
+
+body.dark-mode #back-button:hover {
+    background-color: #353535;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    animation: fadeInLeft .4s;
+    display: block;
+}
+
+.error-msg {
+    color: red;
+    box-sizing: border-box;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: -12px;
+}
+
+.error-msg +.form-textbox:invalid {
+    border-color: red;
+}
+
+.modern-button-full-rounded {
+    animation: fadeInLeft 1s;
+}
+
+.loading-circle {
+    background-color: transparent;
+    position: relative;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #00aa00;
+    border-radius: 50%;
+    border-color: green black black black;
+    animation: rotateCircle .7s infinite linear;
+}
+
+.buttons {
+    margin-top: -5px;
+    padding-bottom: 10px;
+}
+
+.nav-buttons {
+    float: right;
+}
+
+.aha {
+    text-align: center;
+    margin-bottom: -15px;
+}
+
+.aha p {
+    font-family: ;
+    font-size: 13px;
+}
+
+.custom-a {
+    font-size: 13px;
+}
+
+.custom-a:active, .custom-a:visited {
+    color: #00aa00;
+}
+
+@media screen and (min-width: 740px) {
+    .login-panel, .error-msg {
+        box-sizing: border-box;
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    
+    .login-panel, .error-msg {
+        box-sizing: border-box;
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .login-panel, .error-msg {
+        box-sizing: border-box;
+        width: 270px;
+    }
+}

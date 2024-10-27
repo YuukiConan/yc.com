@@ -1,0 +1,119 @@
+@keyframes windows8ScaleIn {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes windows8ScaleOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+/* The element */
+
+.close {
+    animation: windows8ScaleOut .7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#modal {
+    position: fixed;
+    top: 0 !important; bottom: 0 !important; left: 0; right: 0;
+    user-select: none;
+    z-index: 2;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: -1;
+    animation: fadeIn 1s;
+}
+
+#modal-container {
+    background: #e4e4e4;
+    padding: 14px;
+    height: inherit;
+    position: fixed;
+    top: 20%; left: 20%; right: 20%;
+    border: 1px solid #505050;
+    animation: windows8ScaleIn .5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#modal-title {
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 30px;
+    position: relative; top: -10px; left: 10px;
+    font-weight: bold;
+    height: 40px;
+    overflow: hidden;
+    animation: none;
+}
+
+.content {
+    position: relative; top: -20px; left: 0px;
+    padding: 0px 20px 0px 20px;
+    box-sizing: content-box;
+    height: 180px;
+    overflow-y: auto;
+}
+
+/* Buttons */
+
+#buttons-div {
+    margin: 0 20px 0 20px;
+    position: relative;
+    top: -10px;
+    &  #cancel, #deny {
+        float: right;
+    }
+}
+
+.event-btn {
+    background-color: black;
+    border: 2px solid white;
+    padding: 10px;
+    width: 80px;
+    color: white;
+    transition: transform .2s;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+    margin-right: 5px;
+    float: right;
+
+    &:where(#ok, #allow) {
+        background-color: transparent;
+    }
+}
+
+.event-btn:hover {
+    background-color: #4e4e4e;
+
+    &.event-btn:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Events */
+
+.disabled {
+    background: none;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}

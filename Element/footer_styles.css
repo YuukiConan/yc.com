@@ -1,0 +1,148 @@
+footer {
+    background-color: #ededed;
+    border-radius: 0px;
+    padding: 2px 30px 2px 30px;
+    position: absolute;
+    font-family: Open Sans;
+    text-transform: uppercase !important;
+    left: 6em;
+    right: 0px;
+}
+
+footer h6 {
+    font-weight: 400;
+}
+
+.secret-desc {
+    background-color: rgb(255, 255, 255);
+    color: red;
+    font-size: 12px;
+    padding: 0px 30px 0px 0px;
+    height: 80px;
+    overflow-y: scroll;
+    line-height: normal;
+}
+
+/* #float-button {
+    background: black;
+    color: white;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    width: 200px;
+    height: 50px;
+    z-index: 1;
+    animation: show 1s paused;
+    transition: all .3s;
+    font-family: 'Space Mono', system-ui,  sans-serif;
+    line-height: 13px;
+    text-transform: uppercase;
+}
+
+#float-button:hover {
+    filter: drop-shadow(0px 0px 16px #3b0088);
+}
+
+#float-button:active {
+    transform: scale(0.95);
+}
+
+.float-menu {
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 5.5em;
+    right: 25px;
+    border-radius: 12px;
+    animation: fadeOutUp .6s;
+    display: none;
+    z-index: 2;
+}
+
+.float-item-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: #353535;
+    position: relative;
+    width: 120px;
+    align-items: center;
+    height: 50px;
+    padding: 0px 10px 0px 10px;
+    transition: all .2s;
+    text-align: left;
+    display: flex;
+}
+
+.float-item > :first-child {
+    border-radius: 12px 12px 0px 0px;
+}
+
+.float-item > :nth-child(2) {
+    border-radius: 0px;
+}
+
+.float-item > :last-child {
+    border-radius: 0px 0px 12px 12px;
+    border-bottom-color: transparent;
+}
+
+.float-item-button:hover {
+    box-shadow:  -5px 0px #008800;
+}
+
+.float-item-button i {
+    font-size: 16px;
+    padding: 2px 4px 2px 4px;
+    margin-right: 8px;
+    background-color: #00aa005b;
+    border-radius: 50px;
+}
+
+.showmenu 
+{
+    display: block;
+    animation: fadeInUp .6s;
+}
+
+.showmenu #float-button i {
+    transform: rotate(90deg);
+} */
+
+
+#warning-navlink {
+    display: block;
+    position: relative;
+    left: -10px;
+    top: -10px;
+}
+
+.footer-navbutton {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    padding: 10px;
+    margin: 0px 20px 3px 0px;
+    transition: background-color .1s;
+}
+
+.footer-navbutton:hover {
+    background-color: #80808062;
+}
+
+.footer-navbutton:focus {
+    background-color: #80808062;
+}
+
+.footer-navbutton:disabled {
+    color: gray !important;
+    pointer-events: none;
+}
+
+.version-content {
+    line-height: 2px;
+}

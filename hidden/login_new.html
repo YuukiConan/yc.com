@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=0.7, maximum-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/hidden/login-signup_newstyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <link rel="stylesheet" href="/loading.css">
+    <script src="/handler.js"></script>
+    <script src="/hidden/login-signup_handler_new.js"></script>
+    <title> YC.com - Masuk </title>
+</head>
+<body>
+    <div id="loading-container">
+        <div id="loading">
+            <span class="spinner"></span>
+        </div>
+    </div>
+    <div id="body-content">
+        <div id="login-header" style="height: 110px">
+            <h1 id="title"> Login to YC.com </h1>
+        </div>
+        <section id="login">
+            <form action="" autocomplete="on" method="post">
+            <div class="login-container">
+                <div class="login-panel">
+                        <div class="login-content">
+                            <input type="email" class="form-textbox" id="current-email" pattern="[]!#$%^&*()-=_+|\{}''<>?/~`" autocomplete="email" required>
+                            <p class="error-msg"> </p>
+                            <label class="form-label" for="current-email"> Email: </label>
+                        </div>
+                        <div class="login-content">
+                            <input type="password" class="form-textbox" id="current-password" autocomplete="current-password" required>
+                            <label class="form-label" for="current-password"> Password: </label>
+                            <button class="small-buttons" id="show-password" type="button"> <i class="uil uil-eye" id="eye"> </i> </button>
+                            <p class="error-msg"> </p>
+                            <a class="custom-a" href="#"> Forgot your password? </a>
+                        </div>
+                        <div class="other-accounts">
+                            <p> Atau masuk dengan: </p>
+                            <button class="modern-button google" type="button">
+                                <img src="/icon/Google__G__logo.svg">
+                            </button> <br>
+                            <button class="modern-button" style="background: rgb(14, 111, 175)" type="button">
+                                <i class="uil uil-microsoft"></i> Microsoft
+                            </button>
+                            <button class="modern-button" style="background-color: black;" type="button">
+                                <i class="uil uil-github"></i> GitHub
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="buttons">
+                    <a href="/index.html"><button class="modern-button" type="button"> <img src="/icon/windows8_icons/Very_Basic/home.png"> <p> Beranda </p> </button></a>
+                    <button class="modern-button accept-btn-color" id="reuqest-login-btn"> <img src="/icon/windows8_icons/System/login.png"> <p> Masuk </p> </button>
+                </div>
+            </div>
+            <div class="login-signup-footer">
+                <div class="aha">
+                    <p> Already have an account? <a href="/hidden/login_new.html"> Login now </a></p>
+                </div>
+                <p> Copyright© 2018 tech.xyz. All rights reserved. </p>
+                <div class="help-container">
+                    <button class="modern-button"> Butuh bantuan? </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

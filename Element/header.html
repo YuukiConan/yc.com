@@ -1,0 +1,211 @@
+<head>
+    <link rel="stylesheet" href="/Element/header_styles.css" >
+    <link rel="stylesheet" href="/hidden/modal_styles.css">
+    <script defer src="/Element/getHeader.js"></script>
+    <script src="/hidden/getModal.js" defer> </script>
+</head>
+<header>
+    <!-- <h1> YC.com </h1> -->
+    <img src="/icon/tech.xyz_new_logo_test-transparent-wide.png" id="header-logo">
+    <!-- Navigation Button -->
+    <nav>
+        <div class="nav-link">
+            <a href="index.html"><button class="navButton">Beranda</button></a>
+            <a href="/developer.yc.com/index.html"><button class="navButton">Proyek</button></a>
+            <a href="berita.html"><button class="navButton">Berita</button></a>
+            <a href="diskusi.html"><button class="navButton">Diskusi</button></a>
+        </div>
+        <button class="navButton" id="search-click"><i class="uil uil-search"></i></button>
+        <div id="searchMenu" class="search-content hidden">
+            <h2 class="navmenu-header"> <i class="uil uil-search" style="margin-right: 6px;"></i> Cari </h2>
+            <div>
+                <div class="searchAlt-container">
+                    <input type="search" id="searchBox-alt"><button id="search-btn-alt"><i class="uil uil-search" dir="rtl"></i></button>
+                </div>
+                <div class="link-from-li">
+                    <h5> Dari: </h5>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-chart"> </i> Proyek Anda </button></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-user"> </i> Nama Pengguna </button></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-comments"> </i> Diskusi </button></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-folder"> </i> Workspace </button></a>
+                    </li>
+                    <hr>
+                    <h5> Hasil </h5>
+                    <div id="search-result">
+                        <div id="empty-search-result">
+                            <p> Mulailah mencari untuk melihat hasilnya. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="navButton"><i class="uil uil-github"></i> </button>
+        <button class="navButton" id="notify-btn"><i class="uil uil-bell"></i> </button>
+        <div id="notifyMenu" class="notify-content hidden">
+            <h2 class="navmenu-header"> <i class="uil uil-bell" style="margin-right: 6px;"></i> Notifikasi </h2>
+            <div>
+                <div class="actions-container">
+                    <button class="modern-button" id="filter-notify"><i class="uil uil-filter"></i>Filter</button>
+                    <button class="modern-button" id="delete-notify"><i class="uil uil-trash"></i>Hapus</button>
+                    <button class="modern-button" id="notify-settings"><i class="uil uil-setting"></i>Atur</button>
+                </div>
+                
+                    <h5> Terbaru </h5>
+                    <div id="notify-result">
+                        <div id="empty-notify-text"> <h3> Semua sudah bersih!</h3> <p>Anda tidak memiliki notifikasi baru-baru ini.</p> </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal" class="hidden">
+                <div id="overlay"></div>
+                <div id="modal-container">
+                    <div class="modal-content">
+                        <div class="header">
+                            <h1 id="modal-title"> Hapus semua notifikasi? </h1>
+                        </div>
+                        <div class="content">
+                            <p id="description"> Tindakan ini tidak dapat diurungkan! </p>
+                        </div>
+                        <div class="footer">
+                            <div id="buttons-div">
+                                <button class="modern-button accept-btn-color" id="ok" translate="yes"> Hapus </button>
+                                <button class="modern-button" id="cancel" translate="yes"> Batal </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="navButton" id="dropdown-btn"> <span id="nav-current-username"></span> <img src="/images/Sara __ Shinbi's House.jpeg" width="28"></button>
+        <div id="navigationMenu" class="dropdown-content hidden">
+            <h2 class="navmenu-header"> <i class="uil uil-setting" style="margin-right: 6px;"></i> Pengaturan </h2>
+            <div>
+                <div class="account-panel">
+                    <div id="account-info">
+                        <img id="account-frame" src="" hidden>
+                        <img id="default-user" src="/images/Sara __ Shinbi's House.jpeg">
+                        <h3 id="account-username">Sara Deon</h3>
+                        <h3 id="name-placeholder" class="hidden"> Anda tidak masuk akun. </h3>
+                        <h4 class="information " style="margin-top: -8px;">Kontribusi: 824</h4>
+                        <h4 class="information " style="margin-top: -8px;">Member sejak: 10 Mei 2018 <span id="getMemberJoinDate"></span></h4>
+                        <h3 id="name-placeholder"> Akun Administrator </h3>
+                        <h4 class="information hidden" id="info-signIn"> Daftar atau masuk ke YC.com untuk memublikasikan proyek Anda, dan membuka fitur tambahan. </h4>
+                        <button class="modern-button" id="editProfile-btn">Edit</button>
+                        <div id="pengguna-baru" class="hidden">
+                            <a href="/signup.html"><button class="modern-button"> Daftar </button></a>
+                            <span style="text-transform: uppercase;"> - </span>
+                            <a href="/login.html"><button class="modern-button"> Masuk </button></a>
+                        </div>
+                    </div>
+                </div>
+                <li class="settings">
+                    <h5> Pengaturan </h5>
+                    <li>
+                        <button class="menuButton"> <i class="uil uil-moon"> </i> Mode gelap 
+                        <label class="toggle">
+                            <input type="checkbox" id="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        </button>
+                        <li><button class="menuButton"><i class="uil uil-setting"></i> Pengaturan web atau aplikasi </button></li> 
+                        <li><button class="menuButton"><i class="uil uil-wrench"></i> Pengaturan kompiler </button></li>
+                    </li>
+                </li>
+                <div class="your-account-li" >
+                    <h5> Lanjutan </h5>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-chart"> </i> Proyek Anda </button></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-user"> </i> Akun Administrator </button></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-gift"> </i> Langganan </button></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><button class="menuButton"> <i class="uil uil-lock"> </i> Dapatkan API </button></a>
+                    </li>
+                </div>
+                <div class="navigation-li">
+                    <h5> Sekilas </h5>
+                    <li>
+                        <a href="/home.html"><button class="menuButton"> <i class="uil uil-home"> </i> Home </button></a>
+                    </li>
+                    <li>
+                        <a href="/chat.html"><button class="menuButton"> <i class="uil uil-images"> </i> Berita terkini </button></a>
+                    </li>
+                    <li>
+                        <a href="#"><button class="menuButton"> <i class="uil uil-calendar-alt"> </i> Trending </button></a>
+                    </li>
+                    <li>
+                        <a href="#"><button class="menuButton"> <i class="uil uil-comments"> </i> Diskusi </button></a>
+                    </li>
+                </div>
+                <div class="support-li">
+                    <h5> Dukungan </h5>
+                    <li>
+                        <a href="#"><button class="menuButton"> <i class="uil uil-code-branch"> </i> Siklus Hidup YC.com </button></a>
+                    </li>
+                    <li>
+                        <a href="/support/get.html"><button class="menuButton"> <i class="uil uil-phone-alt"> </i> Hubungi kami </button></a>
+                    </li>
+                    <li>
+                        <a href="#"><button class="menuButton"> <i class="uil uil-map"> </i> Alamat </button></a>
+                    </li>
+                </div>
+                <h5> Jelajahi </h5>
+                <li>
+                    <a href="/developer.html"><button class="menuButton"> <i class="uil uil-code-branch"> </i> tech.xyz </button></a>
+                </li>
+                <li>
+                    <a href="https://github.com/TechXYZ"><button class="menuButton"> <i class="uil uil-github"> </i> GitHub </button></a>
+                </li>
+                <li>
+                    <a href="https://github.com/TechXYZ"><button class="menuButton"> <i class="uil uil-comments"> </i> YC.com </button></a>
+                </li>
+                <h5> Produk Kami </h5>
+                <li>
+                    <a href="http://rara.ai"><button class="menuButton"> AI Rara </button></a>
+                </li>
+                <li>
+                    <a href="http://human.pic"><button class="menuButton"> HumanPic </button></a>
+                </li>
+                <li>
+                    <a href="http://webreview.com"><button class="menuButton"> WebReview </button></a>
+                </li>
+                <li>
+                    <a href="https://gbisiloampare.org"><button class="menuButton"> <i class="uil uil-globe"> </i> GBI Siloam Pare </button></a>
+                </li>
+                <div class="fixed-licenselinks">
+                    <a href="#">Donasi</a>
+                    <a href="about.html">Tentang YC.com</a>
+                    <a href="README.txt">Lisensi</a>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    <nav id="side-header">
+        <h3> Untuk pengembang </h3>
+        <button class="side-navButton"> AI Rara for YC.com </button>
+        <button class="side-navButton"> Bantuan Komunitas </button>
+        <button class="side-navButton"> API </button>
+        <button class="side-navButton"> Bak pasir </button>
+        <button class="side-navButton"> Moderator </button>
+        <h3> Perkakas </h3>
+        <button class="side-navButton">Perubahan terbaru</button>
+        <button class="side-navButton">Revisi pengguna</button>
+        <button class="side-navButton">Ekstensi</button>
+        <button class="side-navButton">Tema kustom</button>
+        <!-- <div class="footer-sidebar">
+            <a href="#"> Donasi </a>
+        </div> -->
+    </nav>
+</header>

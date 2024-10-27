@@ -1,0 +1,69 @@
+HTML:
+
+<body>
+    <div id="loading-container">
+        <div id="loading">
+            <span class="spinner"></span>
+        </div>
+    </div>
+    <div id="body-content">
+        <section id="login">
+            <div class="login-container">
+                <div class="login-panel">
+                    <div id="login-header">
+                        <img src="/icon/tech.xyz_new_logo_test-whitetransparent-wide.png" width="90">
+                        <h1> Login to YC.com </h1>
+                    </div>
+                    <br>
+                    <form action="" autocomplete="on" method="post">
+                        <div class="login-content">
+                            <input type="email" class="form-textbox" id="email" pattern="[]!#$%^&*()-=_+|\{}''<>?/~` " required>
+                            <p class="error-msg"> </p>
+                            <label class="form-label" for="email"> Email: </label>
+                        </div>
+                        <div class="login-content">
+                            <div class="show-password-panel">
+                                <button class="small-buttons" id="show-password" type="button" style="background-color: transparent;"> <i class="far fa-eye" id="eye"> </i> </button>
+                            </div>
+                            <input type="password" class="form-textbox" id="password" required>
+                            <a class="custom-a" href="#"> Forgot your password? </a>
+                            <label class="form-label" for="password"> Password: </label>
+                            <p class="error-msg"> </p>
+                        </div>
+                        <div class="other-accounts">
+                            <p> Or: </p>
+                            <button class="small-buttons" type="button">
+                                <i class="uil uil-google"></i>
+                            </button>
+                            <button class="small-buttons" type="button">
+                                <i class="uil uil-microsoft"></i>
+                            </button>
+                            <button class="small-buttons" type="button">
+                                <i class="uil uil-github"></i>
+                            </button>
+                        </div>
+                        <div class="buttons">
+                            <a href="/index.html"><button class="modern-button" type="button"> Home </button></a>
+                            <div class="nav-buttons">
+                                <button type="submit" class="modern-button"role="button" style="background-color: #00aa00; color: white;"> Login </button>
+                            </div>
+                        </div>
+                        <div class="aha">
+                            <p> Don't have an account? <a href="signup.html">Sign up for free!</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="header-as-footer">
+                <h1> YC.com Confidential </h1> 
+                <button id="dropout"><i class="uil uil-arrow-down"></i></button>
+                <button id="dropout1"><i class="uil uil-arrow-up"></i></button>
+            </div>
+            <p> Versi situs ini tidak ditujukan atau dibagikan untuk publik (alias untuk penguji beta). Segala bentuk publikasi, baik dalam bentuk: screenshot, teks log, atau penyalahgunaan Kebijakan Privasi, dapat dikenakan sanksi sesuai dengan hukum negara masing-masing berdasarkan aturan liabilitas dari YC.com itu sendiri. </p>
+        </footer>
+    </div>
+
+CSS:
+

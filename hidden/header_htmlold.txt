@@ -1,0 +1,20 @@
+<header>
+    <!-- <h1 class="header-text"> YC.com </h1> -->
+    <img src="/icon/tech.xyz_new_logo_test-whitetransparent-wide.png" width="95" loading="lazy">
+    <div class="nav-link">
+        <button class="navButton">Beranda</button>
+        <button class="navButton">Berita</button>
+        <button class="navButton">Trending Saat Ini</button>
+    </div>
+    <!-- Navigation Button -->
+    <nav>
+        <button class="navButton" id="search"><i class="uil uil-search"></i></button>
+        <button class="navButton"><i class="uil uil-github"></i> </button>
+        <button class="navButton" id="gp-click"><i class="uil uil-google-play"></i> </button>
+        <button class="navButton" id="dropdown-btn"><i class="uil uil-bars"></i></button>
+        <div class="overlay"></div>
+        <div id="navigationMenu" class="dropdown-content">
+        <h2 class="navmenu-header"> <i class="uil uil-setting" style="margin-right: 6px;"></i>Settings </h2>
+        </div>
+    </nav>
+</header>

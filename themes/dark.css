@@ -1,0 +1,89 @@
+/* Dark mode */
+body.dark-mode {
+    background-color: #0a0a0a;
+    color: white;
+
+    & .modern-button {
+        background-color: #404040;
+        color: white;
+        border-color: #505050;
+    }
+
+    & #modal-container {
+        background-color: #222222;
+    }
+
+    & #searchBox, #searchBox-alt {
+        background-color: #404040;
+        color: white;
+
+    }
+    & #searchBox::-webkit-search-cancel-button, #searchBox-alt::-webkit-search-cancel-button {
+        filter: brightness(5);
+    }
+    & #search-btn i, #search-btn-alt i {
+        color: white;
+    }
+}
+
+body.dark-mode header {
+    background-color: black;
+}
+
+body.dark-mode footer {
+    background-color: black;
+}
+
+body.dark-mode .logo-text {
+    color: white;
+}
+
+/* body.dark-mode :is(#searchBox, #searchBox-alt) {
+    background-color: #202020;
+    color: white;
+    border: 1px solid #303030;
+}
+
+body.dark-mode :is(#searchBox, #searchBox-alt)::placeholder {
+    color: #d1d1d1;
+} */
+
+body.dark-mode .modern-button:hover {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .modern-cards {
+    background-color: #1d1d1dc2;
+    border: 1px solid #313131;
+
+}
+
+body.dark-mode .modern-cards:hover {
+    background-color: #313131;
+}
+
+body.dark-mode .news-container {
+    background-color: #212121;
+}
+
+body.dark-mode .dropdown-content, .search-content, .notify-content {
+    background-color: #242424e8;
+    
+}
+
+body.dark-mode #side-header {
+    background-color: black;
+}
+
+body:not(.dark-mode) :-webkit-any(.dropdown-content, .search-content, .notify-content) {
+    background-color: #ebebebd0;
+}
+
+body.dark-mode .navmenu-header {
+    background-color: #303030;
+}
+
+body.dark-mode .fixed-licenselinks {
+    background-color: #303030;
+}
+

@@ -1,0 +1,369 @@
+/* This CSS is linked to tech.xyz styles */
+
+* {
+    user-select: none;
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(to top right, #000000, #000000, #000000, green);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+hr {
+    border: 1px solid #c4c4c4;
+}
+
+.help-link {
+    position: fixed;
+    right: 2em; top: 9em; bottom: 20px;
+    padding: 20px;
+    border-left: 2px solid gray;
+    z-index: 2;
+    display: none;
+}
+
+#login-header {
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    flex: 35%;
+    font-weight: 400;
+    padding-right: 20px;
+
+    & h1 {
+        animation: fadeInLeft .7s cubic-bezier(0.25, 0.8, 0.25, 1);
+        font-weight: 350;
+        font-size: 40px;
+        margin: 0px;
+        left: -5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    & p {
+        animation: fadeInLeft .9s cubic-bezier(0.25, 0.8, 0.25, 1);
+        padding-top: 5px;
+        font-size: 14px;
+    }
+}
+
+
+.login-panel {
+    animation: fadeInLeft 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: absolute;
+    top: 1em; bottom: 6em; left: 0px; right: 0px;
+    padding: 40px 3em 3em 3em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 60%;
+    overflow-y: scroll;
+    
+    & form {
+        background-color: #202020;
+        overflow-y: auto;
+        box-shadow: 0px 0px 10px #202020;
+        padding: 20px;
+        width: 700px;
+        border-radius: 20px;
+    }
+    & p {
+        font-size: 14px;
+        font-weight: 100;
+    }
+    & span {
+        display: inline;
+        margin-right: 10px;
+        font-size: 24px;
+        font-weight: 100;
+    }
+}
+.login-panel::-webkit-scrollbar {
+    display: none;
+}
+
+textarea {
+    background-color: #20202034;
+    width: 600px;
+    height: 270px;
+    outline: none;
+    resize: none;
+    padding: 6px 0px 0px 6px;
+    overflow-y: visible;
+}
+
+#default-user {
+    border: 1px solid #505050;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: 2px;
+    left: 0px;
+    margin-bottom: -6px;
+    line-height: 100px;
+    text-align: center;
+    display: block;
+    object-fit: contain;
+}
+
+#get_username {
+    text-transform: capitalize;
+}
+
+.form-textbox {
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    width: 350px;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 14px;
+    margin: 4px 0px 0px 0px;
+    outline: none;
+    border: 1px solid #505050;
+    contain: paint;
+}
+
+.login-content {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 48px;
+
+}
+
+.form-label {
+    position: absolute;
+    top: -26px;
+    left: 0px;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+#show-password, #new-show-password, #confirm-show-password {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 1px;
+    left: -3em;
+
+    & i {
+        font-size: 20px;
+        color: black;
+    }
+}
+
+.isToggle {
+    background-color: #95959530;
+}
+
+.toggle {
+    position: relative;
+    top: 2px;
+    width: 52px;
+    height: 18px;
+    border: 1px solid #888888;
+    border-radius: 34px;
+    margin-right: 7px;
+    float: left;
+    filter: drop-shadow(0px 0px 5px rgb(129, 129, 129));
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: .2s;
+    border-radius: 34px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 10px;
+    top: 4px;
+    left: 4.7px;
+    background-color: rgb(21, 179, 16);
+    transition: .3s cubic-bezier(0.500, 0.25, 0.25, 1.65);
+    border-radius: 20px;
+}
+
+input[type=checkbox]:checked + .slider {
+    background-color: #ffffff;
+}
+
+input[type=checkbox]:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.other-accounts {
+    display: inline;
+    position: relative; top: -20px;
+}
+
+.small-buttons {
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+    margin: 0px 4px 0px 10px;
+    font-size: 18px;
+    transition: all .1s;
+}
+
+.small-buttons:hover {
+    background-color: #95959530;
+}
+
+.small-buttons:active {
+    background-color: #95959530;
+}
+
+.small-buttons:focus {
+    background-color: #95959530;
+    color: #00aa00;
+}
+
+body.dark-mode .small-buttons {
+    color: white;
+}
+
+#back-button {
+    background-color: transparent;
+    object-fit: contain;
+    border: none;
+    position: absolute;
+    bottom: 45px;
+    left: 30px;
+    animation: fadeInLeft .6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 2;
+}
+
+#back-button img {
+    width: 32px;
+}
+
+#back-button:active {
+    transform: scale(0.95);
+}
+
+body.dark-mode #back-button:hover {
+    background-color: #353535;
+}
+
+.responsive-grid {
+    flex: 50%; flex-direction: row;
+    flex-wrap: wrap;
+    columns: 300px;
+    column-count: 2;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: inline;
+}
+
+.error-msg {
+    color: red;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+}
+
+.error-msg +.form-textbox:invalid {
+    border-color: red;
+    font-weight: bold;
+}
+
+.loading-circle {
+    background-color: transparent;
+    position: relative;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #aaaaaa;
+    border-radius: 50%;
+    border-color: green transparent transparent transparent;
+    animation: rotateCircle .7s infinite linear;
+}
+
+.buttons {
+    position: absolute;
+    right: 40px;
+    bottom: 50px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.help-container {
+    position: fixed;
+    right: 3em; bottom: 2.5em;
+}
+
+.custom-a {
+    font-size: 13px;
+}
+
+.custom-a:active, .custom-a:visited {
+    color: #00aa00;
+}
+
+.login-signup-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 3em 10px 3em;
+    font-size: 13px;
+    text-align: center;
+}
+
+@keyframes rotateCircle {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (min-width: 740px) and (min-height: 650px){
+    .error-msg {
+        box-sizing: border-box;
+        width: 700px;
+    }
+
+    textarea {
+        width: 430px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .error-msg {
+        box-sizing: border-box;
+        width: 420px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .error-msg {
+        box-sizing: border-box;
+        width: 270px;
+    }
+}

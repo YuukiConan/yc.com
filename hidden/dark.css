@@ -1,0 +1,117 @@
+/* Dark mode */
+body.dark-mode {
+    background-color: #101010;
+    color: white;
+}
+
+body.dark-mode :is(.dropdown-content, .custom-li, .image-carousel)::-webkit-scrollbar {
+    background-color: #1b1b1b !important;
+}
+
+body.dark-mode :is(.dropdown-content, .custom-li, .image-carousel)::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a !important;
+}
+
+body.dark-mode .change-header-backcolor {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .change-header-backcolor #dropdown-button {
+    background-color: #252525;
+}
+
+body.dark-mode #dropdown-button:hover {
+    background-color: #303030;
+    box-shadow: 5px 0px #2a2a2a, 10px 0px #202020;
+}
+
+body.dark-mode footer {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .logo-text {
+    color: white;
+}
+
+body.dark-mode .intro {
+    color: white;
+}
+
+body.dark-mode :is(#searchBox, #searchBox-alt) {
+    background-color: #202020;
+    color: white;
+    border: 1px solid #303030;
+}
+
+body.dark-mode :is(#searchBox, #searchBox-alt):focus {
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom-color: #00969b ; 
+    border-bottom-width: 2px;
+}
+
+body.dark-mode #searchBox-alt:focus + #search-btn-alt {
+    border-radius: 50px;
+}
+
+body.dark-mode :is(#searchBox, #searchBox-alt)::placeholder {
+    color: #d1d1d1;
+}
+
+body.dark-mode :is(#search-btn, #search-btn-alt) {
+    color: white;
+}
+
+body.dark-mode #dropdown-button {
+    background-color: #1b1b1b;
+    color: white;
+}
+
+body.dark-mode .dropdown-content {
+    background-color: #161616;
+    color: white;
+    border-color: #505050;
+}
+
+body.dark-mode .account-panel {
+    background-image: linear-gradient(to bottom right, #3a3a3a, #27272780, #27272740, #27272712);
+    box-shadow: 0px 5px 8px #202020;
+}
+
+body.dark-mode :is(.modern-button, .modern-button-rounded, .modern-button-full-rounded) {
+    color: white;
+}
+
+body.dark-mode :is(.modern-button, .modern-button-rounded, .modern-button-full-rounded):hover {
+    background-color: #505050;
+}
+
+body.dark-mode .modern-info {
+    background-color: #1d1d1dc2;
+    border-color: #313131;
+}
+
+body.dark-mode .menuButton {
+    color: white;
+}
+
+body.dark-mode :is(.navButton, .footer-navbutton) {
+    color: white;
+}
+
+body.dark-mode .ayat-container {
+    background-color: #202020;
+    border: 1px solid #363636;
+    
+}
+
+body.dark-mode .float-menu {
+    background-color: #202020;
+}
+
+body.dark-mode .float-item-button {
+    color: white;
+}
+

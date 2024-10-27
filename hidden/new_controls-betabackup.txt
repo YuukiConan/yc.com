@@ -1,0 +1,549 @@
+YC.com Website
+build MetroEra_2024.09.08-rev3.live
+Copyright© 2018 tech.xyz. All rights reserved.
+
+Ini adalah backup utama untuk tema YC.com terbaru, namun saat ini disembunyikan di sini karena alasan responsif dan kinerja.
+
+Untuk pengembang (developer):
+- Jika Anda memiliki Visual Studio 2013 atau lebih baru:
+1. Download sumber kode YC.com (baca-saja, kecuali styling JavaScript) di GitHub YuukiConan (http://github.com/yuukiconan).
+2. Setelah itu, ekstrak berkas .ZIP yang sudah diunduh.
+3. Buka Visual Studio.
+4. Lalu, klik Open Folder dan pilih folder yang terekstrak tadi.
+5. Buka file ini dan pilih salah satu file di sub-folder Element.
+6. Salin kode di bawah ini sesuai nama elemen yang tertera.
+7. Buka salah satu elemen lalu blok semua kode (bisa menekan Ctrl + A)
+8. Tempel dan jalankan website dengan menekan tombol "run".
+
+Note:
+Beberapa elemen mungkin tidak berfungsi dengan baik. Jika keberatan, silakan hubungi kami melalui surel: support@yc.com atau melalui halaman Dukungan.
+
+
+--------------------------------------------------------
+Header elements:
+
+.search-li {
+    display: flex;
+}
+
+#searchBox {
+    position: absolute;
+    left: 0; right: 0;
+    padding: 0px 40px 0px 10px;
+}
+
+#search-btn {
+    position: absolute;
+    right: 0.5em;
+    height: 45px;
+}
+
+#search-btn-alt {
+    position: relative;
+    top: 0px;
+    right: 23px;
+    height: 37px;
+}
+
+:is(#searchBox, #searchBox-alt) {
+    background-color: rgb(247, 247, 247);
+    outline: none;
+    color: black;
+    border: 2px solid rgb(200, 200, 200);
+    box-sizing: border-box;
+    height: 45px;
+    transition: all .2s;
+}
+
+:is(#search-btn, #search-btn-alt) {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: 16px;
+    width: 40px;
+    transition: all .1s;
+}
+
+:is(#search-btn, #search-btn-alt):hover {
+    border-left: 1px solid #505050;
+    border-radius: 50px;
+}
+
+#searchBox-alt {
+    padding: 0px 40px 0px 12px;
+    margin: 0px -10px 6px 0px;
+    width: 305px;
+    position: relative;
+    top: 0px;
+    left: 8px;
+    border-radius: 10px;
+}
+
+:is(#searchBox, #searchBox-alt)::placeholder {
+    letter-spacing: 0px;
+    font-family: ;
+    color: #8b8b8b;
+}
+
+:is(#searchBox, #searchBox-alt)::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+:is(#searchBox, #searchBox-alt):focus {
+    background-color: #505050 !important;
+    color: white;
+
+}
+
+:is(#searchBox, #searchBox-alt):focus + :is(#search-btn, #search-btn-alt) {
+    color: white;
+}
+
+.search-container {
+    position: relative;
+    top: 35px;
+}
+
+@keyframes windows8ScaleOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.small-buttons {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: inline;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    left: -10px;
+    border-radius: 10px;
+}
+
+.dropdown-content {
+    background-color: #e7e7e7;
+    color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    width: 380px;
+    z-index: 2;
+    border: 1px solid gray;
+    transition: border-radius .1s cubic-bezier(1, 0, 0, 1);
+    padding: 8px 0px 6px 10px;
+    animation: fadeOutLeft .3s linear;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: , system-ui , sans-serif;
+}
+
+.dropdown-content::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown-content li {
+    list-style: none;
+    white-space: nowrap;
+    animation: fadeInLeft .9s;
+    width: 100%;
+}
+
+.dropdown-content h5 {
+    overflow: hidden;
+    position: relative; 
+    left: 10px; top: -10px; 
+    margin-bottom: 0px; 
+    text-transform: uppercase;
+    animation: fadeInLeft .6s;
+}
+
+.account-panel {
+    box-sizing: content-box;
+    margin: -10px 0px 15px -12px;
+    padding: 10px 20px 10px 20px;
+    text-transform: none;
+    background-color: black !important;
+    color: white;
+    font-family: system-ui;
+    font-weight: 200;
+    box-shadow: 0px 2px 15px #bebebe;
+    transition: none;
+    text-align: left;
+}
+
+#header {
+    display: flex;
+}
+
+#header h3 {
+    font-family: , sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 3px 0px 3px 0px;
+}
+
+#account-frame {
+    box-shadow: 0px 0px 12px #464646;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    position: relative;
+    top: 2px;
+    left: 0px;
+    margin-bottom: -10px;
+    display: none;
+}
+
+/* this placeholder will removed if user are logged in. */
+#default-user {
+    border-radius: 50px;
+    border: 1px solid #bdbdbd;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 2px;
+    left: 0px;
+    margin-bottom: -6px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+}
+
+body.dark-mode :is(#default-user, #account-frame) {
+    border-color: #505050;
+}
+
+#username {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.information {
+    font-size: 12px;
+    font-weight: 400;
+    margin: -3px 0px 15px 0px;
+    white-space: wrap;
+    position: relative;
+}
+
+#login-to-panel {
+    position: relative;
+    top: -10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.menuButton {
+    background-color: transparent;
+    border: 3px solid transparent;
+    outline: none;
+    width: 100%;
+    height: 42px;
+    border-radius: 0px;
+    margin: 0px 0px 5px 0px;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    padding: 0px 16px 0px 8px;
+    box-sizing: border-box;
+    transition: all .2s;
+}
+
+.menuButton i {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: inline-block;
+    line-height: 19.5px;
+    font-size: 16px;
+    padding: 4px;
+    text-align: center;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.menuButton:hover {
+    border-radius: 0px;
+    box-shadow: -4px 0px #404040;
+}
+
+.menuButton:active {
+    transform: scale(0.98);
+}
+
+.menuButton:focus {
+    background-color: #70707042;
+    box-shadow: -20px 0px #404040;
+}
+
+.navigation-li, .support-li {
+    display: none;
+}
+
+.show {
+    animation: fadeInLeft .2s;
+    display: inline;
+}
+
+.overlay {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Warna hitam dengan transparansi 50% */
+    z-index: 0; /* Pastikan overlay berada di bawah dropdown */
+    visibility: hidden; /* Sembunyikan overlay secara default */
+    transition: visibility 0.3s, opacity 0.7s;
+    opacity: 0;
+}
+
+.showOverlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.toggle {
+    position: relative;
+    top: 4px;
+    width: 52px;
+    height: 18px;
+    border: 1px solid #888888;
+    border-radius: 34px;
+    float: right;
+    filter: drop-shadow(0px 0px 5px rgb(129, 129, 129));
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: .2s;
+    border-radius: 34px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 10px;
+    top: 4px;
+    left: 4.7px;
+    background-image: linear-gradient(to right, #9b00cade, #058b90);
+    transition: .3s cubic-bezier(0.500, 0.25, 0.25, 1.65);
+    border-radius: 20px;
+}
+
+input[type=checkbox]:checked + .slider {
+    background-color: #ffffff;
+}
+
+input[type=checkbox]:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+@media screen and (max-width: 1000px) {
+    .support-link {
+        display: none;
+    }
+    
+    .support-li {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .nav-link {
+        display: none;
+    }
+
+    .navigation-li {
+        display: block;
+    }
+
+    .dropdown-content {
+        overflow-y: scroll;
+        width: 315px;
+    }
+
+    #searchBox-alt {
+        width: 235px;
+    }
+}
+-------------------------------------------------
+Footer elements:
+footer {
+    background-color: black;
+    color: white;
+    border-radius: 0px;
+    padding: 2px 30px 2px 30px;
+    position: absolute;
+    font-family: Inter;
+    text-transform: uppercase !important;
+    left: 0px;
+    right: 0px;
+}
+
+footer h6 {
+    font-weight: 400;
+}
+
+.secret-desc {
+    color: red;
+    font-size: 12px;
+    padding: 0px 30px 0px 0px;
+    height: 80px;
+    overflow-y: scroll;
+    line-height: normal;
+}
+
+#float-button {
+    background: black;
+    color: white;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    width: 200px;
+    height: 50px;
+    z-index: 1;
+    animation: show 1s paused;
+    transition: all .3s;
+    font-family: 'Space Mono', system-ui,  sans-serif;
+    line-height: 13px;
+    text-transform: uppercase;
+}
+
+#float-button:hover {
+    filter: drop-shadow(0px 0px 16px #3b0088);
+}
+
+#float-button:active {
+    transform: scale(0.95);
+}
+
+.float-menu {
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 5.5em;
+    right: 25px;
+    border-radius: 12px;
+    animation: fadeOutUp .6s;
+    display: none;
+    z-index: 2;
+}
+
+.float-item-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: #353535;
+    position: relative;
+    font-family: ;
+    width: 120px;
+    align-items: center;
+    height: 50px;
+    padding: 0px 10px 0px 10px;
+    transition: all .2s;
+    text-align: left;
+    display: flex;
+}
+
+.float-item > :first-child {
+    border-radius: 12px 12px 0px 0px;
+}
+
+.float-item > :nth-child(2) {
+    border-radius: 0px;
+}
+
+.float-item > :last-child {
+    border-radius: 0px 0px 12px 12px;
+    border-bottom-color: transparent;
+}
+
+.float-item-button:hover {
+    box-shadow:  -5px 0px #008800;
+}
+
+.float-item-button i {
+    font-size: 16px;
+    padding: 2px 4px 2px 4px;
+    margin-right: 8px;
+    background-color: #00aa005b;
+    border-radius: 50px;
+}
+
+.showmenu 
+{
+    display: block;
+    animation: fadeInUp .6s;
+}
+
+.showmenu #float-button i {
+    transform: rotate(90deg);
+}
+
+@keyframes show {
+    from {
+        transform: translateX(9em);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#warning-navlink {
+    display: block;
+    position: relative;
+    left: -10px;
+    top: -10px;
+}
+
+.footer-navbutton {
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0px 20px 3px 0px;
+    transition: background-color .2s;
+}
+
+.footer-navbutton:hover {
+    background-color: #80808062;
+}
+
+.footer-navbutton:focus {
+    background-color: #80808062;
+}
+
+.footer-navbutton:disabled {
+    color: gray !important;
+    pointer-events: none;
+}
+
+.version-content {
+    line-height: 2px;
+}
