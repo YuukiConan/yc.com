@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById("modal");
     const modalctr = document.getElementById("modal-container");
 
-    fetch('/hidden/modal.html')
+    fetch('modal.html')
         .then(response => response.text())
         .then(data => {
             modal.innerHTML = data;
