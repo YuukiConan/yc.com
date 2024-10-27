@@ -1,0 +1,29 @@
+/* Loading page */
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    font-family: sans-serif;
+}
+
+.spinner {
+    background-color: transparent;
+    color: transparent;
+    border: 5px solid;
+    border-color: green transparent transparent transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 26px;
+    text-align: center;
+    line-height: 40px;
+    animation: loading .6s infinite linear;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=0.7, maximum-scale=1">
+    <meta name="author" content="YuukiC">
+    <meta name="description" content="Official Website of YuukiC">
+    <link rel="website icon" href="icon/tech.xyz_new_logo_test-transparent-small.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/loading.css">
+    <link rel="stylesheet" href="/themes/dark.css">
+    <title> YC.com </title>
+    <script defer src="/handler.js" crossorigin="anonymous"></script>
+    <script defer src="/Element/getHeader.js" crossorigin="anonymous"></script>
+    <script defer src="/Element/getFooter.js" crossorigin="anonymous"></script>
+    <script defer src="/Element/getModal.js" crossorigin="anonymous"></script>
+    <script src="/handler.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        fetch("Element/header.html")
+        .then(response => response.text())
+        .then(html => {
+            document.querySelector('header').innerHTML = html;
+
+            const acc_username = document.getElementById('account-username');
+            const your_nameAtIndex = document.getElementById('your-name');
+
+            if (acc_username && your_nameAtIndex) {
+                let getAccName = acc_username.innerText.trim();
+                your_nameAtIndex.innerText = getAccName.split(" ")[0];
+            }
+        });
+
+        
+        
+    </script>
+</head>
+<body>
+    <div id="loading-container">
+        <div id="loading">
+            <span class="spinner"></span>
+        </div>
+    </div>
+    <div id="body-content">
+        <header></header>
+        <main>
+            <article id="beranda">
+                <section class="article-head">
+                    <div class="flex-grid">
+                        <div class="perkenalan">
+                            <h1><span id="suasana"></span>, <span id="your-name"></span>! </h1>
+                            <p>Hari yang indah, bukan?</p>
+                            <div class="flex-grid" style="margin-top: 3em;">
+                                <div class="modern-cards" id="create-project" style="background-color: #00a13b;">
+                                    <i class="uil uil-plus" style="font-size: 30px;"> </i>
+                                    <h3> Buat proyek baru </h3>
+                                    <p class="description"> </p>
+                                    
+                                </div>
+                                <div id="modal" class="hidden">
+                                    <div id="overlay"></div>
+                                    <div id="modal-container">
+                                        <div class="modal-content">
+                                            <div class="header">
+                                                <h1 id="modal-title"> Buat proyek baru </h1>
+                                            </div>
+                                            <div class="content">
+                                                <div id="description">
+                                                    <p for="project-name"> Nama proyek </p> <input type="text" id="project-name">
+                                                    <p>Bahasa pemrograman</p>
+                                                    <select id="prog-lang">
+                                                        <option> C# </option>
+                                                    </select>
+                                                    <p>Pengaturan</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer">
+                                                <div id="buttons-div">
+                                                    <button class="modern-button accept-btn-color" id="ok" translate="yes"> Buat </button>
+                                                    <button class="modern-button" id="cancel" translate="yes"> Batal </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modern-cards">
+                                    <i class="uil uil-comments" style="font-size: 30px;"> </i>
+                                    <h3> Diskusi yuk! </h3>
+                                </div>
+                                <div class="modern-cards">
+                                    <i class="uil uil-flask" style="font-size: 30px;"> </i>
+                                    <h3> Uji coba! </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article id="content">
+                <div class="flex-grid">
+                    <section class="news-content">
+                        <h1> Terbaru </h1>
+                        <div class="news-container" id="news-container">
+                            <div class="modern-cards" id="news-modern-cards">
+                                <img src="/images/windows 10 new hero wallpaper.jpg">
+                                <h3 id="judul-berita"> Placeholder </h3>
+                                <p id="news-description"> Ini adalah isi deskripsi berita YC.com. Isi deskripsi artikel ditentukan dengan pengantar setiap artikel. </p>
+                            </div>
+                            <div class="modern-cards" id="news-modern-cards">
+                                <img src="/images/line.jpg">
+                                <h3 id="judul-berita"> Placeholder </h3>
+                                <p id="news-description"> Ini adalah isi deskripsi berita YC.com. Isi deskripsi artikel ditentukan dengan pengantar setiap artikel. </p>
+                            </div>
+                            <div class="modern-cards" id="news-modern-cards">
+                                <img src="/images/windows 10 new hero wallpaper.jpg">
+                                <h3 id="judul-berita"> Placeholder </h3>
+                                <p id="news-description"> Ini adalah isi deskripsi berita YC.com. Isi deskripsi artikel ditentukan dengan pengantar setiap artikel. </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="discuss-content">
+                        <h1> Diskusi</h1>
+                    </section>
+                </div>
+            </article>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
